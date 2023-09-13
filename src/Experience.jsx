@@ -46,8 +46,8 @@ const Experience = () => {
                 <meshToonMaterial color="yellow" />
             </mesh>
             <Bee position={[-3,-2,0]} scale={4}/>
-            <Tree position={[3,-2.4,0]} scale={3}/>
-            <Chest position={[2.76,-0.9,0.4]} scale={0.002} rotation-y={-Math.PI/2}/>
+            <Tree position={[5,-3.95,-3]} scale={4.5}/>
+            <Chest position={[4.70,-1.70,-2.65]} scale={0.0034} rotation-y={-Math.PI/2}/>
             <mesh position-y={-2} rotation-x={-Math.PI / 2} >
                 <planeGeometry attach="geometry" args={[32, 12]} />
                 <meshStandardMaterial {...propsTexture} />
