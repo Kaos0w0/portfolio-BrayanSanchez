@@ -5,6 +5,9 @@ import { Chest } from "./World/Chest";
 import { Bee } from "./World/Bee";
 import { Tree } from "./World/Tree";
 import { useTexture } from "@react-three/drei";
+import Lights from "./World/Lights";
+import Environments from "./World/Environment";
+import { Perf } from "r3f-perf";
 
 const Experience = () => {
     const boxRef = useRef();
@@ -30,9 +33,10 @@ const Experience = () => {
 
     return (
         <>
+            <Perf position={"top-right"} />
             <OrbitControls />
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={2} />
+            <Lights />
+            <Environments />
             <mesh ref={boxRef} position={[0, 2.78, 0]} rotation={[0, -Math.PI / 4, 0]} scale={0.1}>
                 <boxGeometry args={[1, 1, 1]} />
                 <meshToonMaterial color="red" />
@@ -48,7 +52,7 @@ const Experience = () => {
             <Bee position={[-3,-2,0]} scale={4}/>
             <Tree position={[5,-3.95,-3]} scale={4.5}/>
             <Chest position={[4.70,-1.70,-2.65]} scale={0.0034} rotation-y={-Math.PI/2}/>
-            <mesh position-y={-2} rotation-x={-Math.PI / 2} >
+            <mesh position-y={-2} rotation-x={-Math.PI / 2} receiveShadow>
                 <planeGeometry attach="geometry" args={[32, 12]} />
                 <meshStandardMaterial {...propsTexture} />
             </mesh>
