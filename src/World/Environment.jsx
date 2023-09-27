@@ -24,7 +24,7 @@ const Environments = () => {
                 size={4}
                 fade={true}
                 speed={0.5}
-                scale={6}
+                scale={[12,4,6]}
             />
             <Cloud
                 opacity={0.5}
