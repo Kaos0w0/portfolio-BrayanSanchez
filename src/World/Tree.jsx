@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { RigidBody } from "@react-three/rapier";
 
 export function Tree(props) {
   const { nodes, materials } = useGLTF("/assets/models/tree/minecraft_tree.glb");
@@ -12,12 +13,14 @@ export function Tree(props) {
           geometry={nodes.Object_2.geometry}
           material={materials.Oak_Leaves}
         />
+        
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_3.geometry}
           material={materials.Oak_Log}
         />
+        
       </group>
     </group>
   );

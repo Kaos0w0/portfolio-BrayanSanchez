@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <>  
-            <Info name={"Brayan Sanchez L."} biography={"Web 3D Developer"} />
+            <Info name={"Brayan A. Sanchez L."} biography={"Web 3D Developer"} />
             <Canvas
                 camera={cameraSettings}
                 shadows

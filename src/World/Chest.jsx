@@ -1,16 +1,13 @@
 import React, { useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { useEffect } from "react";
 
 export function Chest(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/assets/models/chest/minecraft_chest.glb");
   const { actions } = useAnimations(animations, group);
-  useEffect(()=>{
-    const action = actions["Chest_0_A|Chest_0_AAction"]
-    action.play()
-    }, [])
+
   return (
+
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
@@ -49,6 +46,7 @@ export function Chest(props) {
         </group>
       </group>
     </group>
+
   );
 }
 

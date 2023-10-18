@@ -4,13 +4,13 @@ import { Text } from "@react-three/drei";
 const Signs = () => {
     const handleSign = (type) => {
         if(type === "about"){
-            alert("Mi nombre es Brayan Sanchez, un placer! :D");
+            alert("Mi nombre es Brayan Sanchez Lozano, un placer! :D");
         } else if(type === "contact"){
             alert("Puedes contactarme a mi correo: brayan.andres.sanchez@correounivalle.edu.co");
         } else if(type === "projects"){
-            alert("Puedes ver mis proyectos en mi github: https://github.com/Kaos0w0");
+            alert("Puedes ver mis proyectos en mi github: @Kaos0w0");
         } else if(type === "skills"){
-            alert("Puedes ver mis habilidades en mi linkedin: https://www.linkedin.com/in/brayan-sanchez-0b6b3b1b5/");
+            alert("Ninguna en particular. Simplemente me gusta programar, jugar y aprender cosas nuevas.");
         }
       };
     return(
